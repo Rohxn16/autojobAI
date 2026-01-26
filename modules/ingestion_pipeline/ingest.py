@@ -1,3 +1,5 @@
+import shutil
+import os
 from langchain_ollama import OllamaEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
@@ -28,3 +30,16 @@ def ingest_string_to_vector_database_with_chunking(text: str):
         embedding=embeddings,
         persist_directory="./my_vector_db"  # Optional: saves to disk
     )
+
+def clear_previous_session(persist_directory: str = "./my_vector_db"):
+
+    """
+    Clear the vector database from the previous session
+
+    :return: None
+    """
+    if os.path.exists(persist_directory):
+        shutil.rmtree(persist_directory)
+        print('Previous session cleared. Proceeding...')
+    else:
+        print('No existing Session to clear. Proceeding.....')

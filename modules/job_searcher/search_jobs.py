@@ -22,7 +22,7 @@ class JobFinder:
             "page": 0,
             "job_title_or": [keyword],
             "job_country_code_or": ["IN"],
-            "posted_at_max_age_days": 7,
+            "posted_at_max_age_days": 14,
             "order_by": [{"field": "date_posted", "desc": True}]  # Get the newest ones first
         }
 

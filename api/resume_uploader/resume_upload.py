@@ -5,10 +5,9 @@ from fastapi import (APIRouter,
                      HTTPException,
                      status
                     )
-from modules.ingestion_pipeline.ingest import ingest_string_to_vector_database_with_chunking as ingest
-import os
+from modules.ingestion_pipeline.ingest import (ingest_string_to_vector_database_with_chunking as ingest,
+                                               clear_previous_session)
 import tempfile
-import json
 
 router = APIRouter()
 
@@ -30,6 +29,10 @@ async def upload_resume(resume: UploadFile = File(...)):
 
     # save uploaded file into a temporary location
     try:
+
+        # first clear any existing data from the previous session
+        clear_previous_session()
+
         with tempfile.NamedTemporaryFile(
             delete=False,
             suffix='.pdf',
