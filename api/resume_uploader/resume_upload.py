@@ -8,6 +8,8 @@ from fastapi import (APIRouter,
 from modules.ingestion_pipeline.ingest import (ingest_string_to_vector_database_with_chunking as ingest,
                                                clear_previous_session)
 import tempfile
+import shutil
+import os
 
 router = APIRouter()
 
@@ -19,7 +21,7 @@ async def upload_resume(resume: UploadFile = File(...)):
     :param resume -> UploadFile: PDF of the resume
     :return -> str: text extracted from the resume
     """
-
+    clear_previous_session()
     #validation check for pdf type
     if resume.content_type != "application/pdf":
         raise HTTPException(
@@ -32,6 +34,10 @@ async def upload_resume(resume: UploadFile = File(...)):
 
         # first clear any existing data from the previous session
         clear_previous_session()
+
+        UPLOAD_DIR = "uploads"
+        
+        os.makedirs(UPLOAD_DIR, exist_ok=True)
 
         with tempfile.NamedTemporaryFile(
             delete=False,
@@ -46,6 +52,8 @@ async def upload_resume(resume: UploadFile = File(...)):
             ingestion = ingest(extracted_text)
             # process the pdf file and store it in a vector db
 
+            with open(os.path.join(UPLOAD_DIR, 'resume.txt'), 'w') as f:
+                f.write(extracted_text)
             print(ingestion)
 
             return {

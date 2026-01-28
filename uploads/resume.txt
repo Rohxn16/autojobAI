@@ -1,0 +1,49 @@
+Debarghya Saha
+debarghyasren@gmail.com | +91 9147031684 | GitHub | LinkedIn | Portfolio
+Professional Experience
+Junior Data Scientist October 2025 – Present
+Ethical Den (Hivyr.ai) Hybrid (Part-time)
+• Developing an Outbound Calls Intelligence Pipeline leveraging speech analytics, emotion detection , and call outcome
+prediction models to optimize customer engagement and automation workflows
+AI Intern July 2025 – September 2025
+Ethical Den (Hivyr.ai) Onsite
+• Led the development of a real-time multilingual conversational AI agent integrating Speech-to-Text, LLMs
+(Gemma3n:E4B), sentiment detection, and Text-to-Speech systems for scalable voice interaction
+• Implemented a FastSpeech2-based TTS pipeline in PyTorch using Epitran-generated IPA phoneme sequences, reducing
+model training time by 32%
+• Enhanced prosody and emotion modeling through pitch, energy, and duration embeddings , resulting in more expressive and
+natural speech synthesis
+• Developed an Apache Beam-based data pipeline to curate 24kHz multilingual voice datasets with Speech Synthesis Markup
+Language (SSML), improving data scalability and efficiency
+• Directed a cross-functional team on model architecture design, training optimization, and deployment strategies , ensuring
+research-to-production alignment
+Technical Projects
+Deep Reinforcement Learning Agent for Pokemon Red Custom Environment GitHub
+• Designed a custom OpenAI Gym environment using ROM disassembly and memory mapping to model Pokemon battle mechanics
+• Trained PPO and A2C agents with reward shaping and GAE, achieving 82% win rate and higher evolution probability
+• Improved training efficiency by 35% via action-space optimization and refined reward functions
+FastSpeech2 Long-Form Text-to-Speech System (PyTorch) GitHub
+• Extended FastSpeech2 to support long-form text synthesis using sentence segmentation and audio stitching
+• Refactored pipeline for PyTorch 2.x compatibility, improving inference stability and GPU memory handling
+• Enhanced alignment and preprocessing to preserve prosody and natural pause insertion in long speech
+Technical Skills
+Languages: Python, TypeScript
+ML/AI: PyTorch, HuggingFace, LangChain, MLflow, Scikit-learn, NLP, CV, DL
+Frameworks/Tools: FastAPI, Django, React, Docker, Kubernetes, GitHub Actions, SB3, llama.cpp, PineconeDB, Milvus, Pandas,
+NumPy, Node.js
+Cloud/DevOps: AWS, GCP, Linux, CI/CD, Redis, Apache Kafka, Prometheus, Grafana
+Databases/Other: PostgreSQL, MongoDB, Vector DBs, REST APIs, System Design, Microservices, Prompt Engineering
+Education
+Meghnad Saha Institute of T echnology West Bengal, India
+B.Tech in Computer Science and Business Systems 2022 – 2026
+Sudhir Memorial Institute West Bengal, India
+CBSE – Senior Secondary 2020 – 2022
+Calcutta Airport English High School West Bengal, India
+WBBSE – Secondary Education 2007 – 2020
+Achievements and Awards
+• Smart India Hackathon 2024 Winner – Led team to solve Ministry of Education Problem 1742; ranked top 0.3% among
+88,221+ teams with AI-powered educational solution
+• AI4Andhra Hackathon 2025 Finalist – Advanced to finals in AI track; presented LLM-powered system for automated CCTNS
+query generation and processing
+• Smart India Hackathon 2023 Internal Winner – Secured first place at institutional level with disaster management simulation
+app
